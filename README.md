@@ -7,7 +7,7 @@ Snipe nitro gift codes from alt accounts to your main account.
 # Features
 - Colours for your eyes to distinguish success and failure.
 - Multi-token support.
-- Notifications work if you don't use your main token for sniping.
+- Mobile notifications work if you don't use your main token for sniping.
 - Removes non-alphanumeric chars automatically from codes and tries to redeem.
 - Auto-detects obvious fake codes.
 - Light, no cluttered code, very simple and efficient.
