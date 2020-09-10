@@ -38,7 +38,6 @@ for (const token of tokens) {
             continue;
          }
 
-
          if (code.length < 16 || code.length > 24) {
             console.log(chalk.gray(`[Sniper] Fake Code - Code: ${chalk.bold(code)} - ${msg.guild ? msg.guild.name : 'DMs'} (${msg.author.tag})`));
             continue;
@@ -66,8 +65,7 @@ for (const token of tokens) {
                console.log(chalk.red(`[Sniper] Invalid Code - Code: ${chalk.bold(code)} - ${msg.guild ? msg.guild.name : 'DMs'} (${msg.author.tag}) - ${end}`));
             }
             consumedCodes.push(code);
-         }
-         );
+         });
       }
    });
 
