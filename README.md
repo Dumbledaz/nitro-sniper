@@ -15,7 +15,9 @@ Snipe nitro gift codes from alt accounts to your main account.
 
 # Installation methods
 #### Heroku (recommended)
-Click on the image below and login to continue the setup.  
+Click on the image below and login to continue the setup. 
+
+##### After deploying, Go to the `Resources` tab and turn off the `web` dyno and turn on `worker`. Now you can go ahead and click on `More` in the top right and click on logs.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/hellbound1337/nitro-sniper/tree/master)  
 
