@@ -3,6 +3,7 @@ Snipe nitro gift codes from alt accounts to your main account.
 
 # Preview 
 ![Preview](https://i.imgur.com/PU3QaZc.png)
+![Webhook](https://i.imgur.com/R9TQZ0k.png)
 
 # Features
 - Colours for your eyes to distinguish success and failure.
@@ -12,6 +13,7 @@ Snipe nitro gift codes from alt accounts to your main account.
 - Auto-detects obvious fake codes.
 - Light, no cluttered code, very simple and efficient.
 - One-click deploy.
+- Webhook support.
 
 # Installation methods
 #### Heroku (recommended)
