@@ -5,11 +5,40 @@ const consumedCodes = [];
 require('dotenv').config({ path: 'dotenv' });
 
 const phin = require('phin').unpromisified;
-const { Client } = require('discord.js');
+const { Client, WebhookClient, RichEmbed } = require('discord.js');
 const chalk = require('chalk');
 
 const tokens = process.env.guildTokens.split(',');
 const mainToken = process.env.mainToken;
+const webhookUrl = process.env.webhookUrl;
+
+if (webhookUrl != null) {
+   const webhooktoken = /[^/]*$/.exec(webhookUrl)[0];
+   const webhookid = webhookUrl.replace(/^.*\/(?=[^\/]*\/[^\/]*$)|\/[^\/]*$/g, '');
+   const webhookclient = new WebhookClient(webhookid, webhooktoken);
+   function fireHook(type, code, guild, author, time, alt) {
+      let embed = new RichEmbed()
+         .setColor('#41FC9F')
+         .setTitle('Nitro Sniped')
+         .addField('Time Taken', time, true)
+         .addField('Type', type, true)
+         .addField('Code', code, true)
+         .addField('Account', alt, true)
+         .addField('Author', `${author}`, true)
+      guild ?
+         embed.addField('Location', `${guild} (Server)`, true) :
+         embed.addField('Location', `DMs`, true);
+      webhookclient.send('', {
+         embeds: [embed]
+      }).catch(() => {
+         if (webhookUrl) {
+            console.log(
+               chalk.red('[Sniper] Couldn\'t reach webhook. Your webhook URL is invalid.')
+            )
+         }
+      })
+   }
+}
 
 for (const token of tokens) {
    const client = new Client({
@@ -61,6 +90,7 @@ for (const token of tokens) {
                console.log(chalk.red(`[Sniper] Already Redeemed - Code: ${chalk.bold(code)} - ${msg.guild ? msg.guild.name : 'DMs'} (${msg.author.tag}) - ${end}`));
             } else if ('subscription_plan' in res.body) {
                console.log(chalk.green(`[Sniper] Success - Code: ${chalk.bold(code)} - ${res.body.subscription_plan.name} - ${msg.guild ? msg.guild.name : 'DMs'} (${msg.author.tag}) - ${end}`));
+               fireHook(res.body.subscription_plan.name, code, msg.guild ? msg.guild.name : null, msg.author.tag, end, client.user.tag);
             } else if (res.body.message == 'Unknown Gift Code') {
                console.log(chalk.red(`[Sniper] Invalid Code - Code: ${chalk.bold(code)} - ${msg.guild ? msg.guild.name : 'DMs'} (${msg.author.tag}) - ${end}`));
             }
