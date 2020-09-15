@@ -1,4 +1,4 @@
-# Nitro Sniper [![CodeFactor](https://www.codefactor.io/repository/github/hellbound1337/nitro-sniper/badge)](https://www.codefactor.io/repository/github/hellbound1337/nitro-sniper) [![GitHub issues](https://img.shields.io/github/issues/hellbound1337/nitro-sniper?style=flat)](https://github.com/hellbound1337/nitro-sniper/issues) [![GitHub stars](https://img.shields.io/github/stars/hellbound1337/nitro-sniper?style=flat)](https://github.com/hellbound1337/nitro-sniper/stargazers)
+# Nitro Sniper [![CodeFactor](https://www.codefactor.io/repository/github/hellboundthegod/nitro-sniper/badge)](https://www.codefactor.io/repository/github/hellboundthegod/nitro-sniper) [![GitHub issues](https://img.shields.io/github/issues/hellboundthegod/nitro-sniper?style=flat)](https://github.com/hellboundthegod/nitro-sniper/issues) [![GitHub stars](https://img.shields.io/github/stars/hellboundthegod/nitro-sniper?style=flat)](https://github.com/hellboundthegod/nitro-sniper/stargazers)
 Snipe nitro gift codes from alt accounts to your main account.
 
 # Preview 
@@ -25,7 +25,7 @@ Click on the image below and login to continue the setup.
 
 #### Local
 - Make sure [Node](https://nodejs.org/en/) is installed on your system and open a command prompt/terminal.
-- Run `git clone https://github.com/hellbound1337/nitro-sniper nitro-sniper`
+- Run `git clone https://github.com/hellboundthegod/nitro-sniper nitro-sniper`
 - Run `cd nitro-sniper`
 - Run `npm install`
 - Edit the dotenv file. <br>
