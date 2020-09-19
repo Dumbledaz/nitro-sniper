@@ -21,11 +21,11 @@ Click on the image below and login to continue the setup.
 
 ##### After deploying, Go to the `Resources` tab and turn off the `web` dyno and turn on `worker`. Now you can go ahead and click on `More` in the top right and click on logs.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/hellbound1337/nitro-sniper/tree/master)  
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/dumbledaz/nitro-sniper/tree/master)  
 
 #### Local
 - Make sure [Node](https://nodejs.org/en/) is installed on your system and open a command prompt/terminal.
-- Run `git clone https://github.com/hellboundthegod/nitro-sniper nitro-sniper`
+- Run `git clone https://github.com/dumbledaz/nitro-sniper nitro-sniper`
 - Run `cd nitro-sniper`
 - Run `npm install`
 - Edit the dotenv file. <br>
